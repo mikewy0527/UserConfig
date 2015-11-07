@@ -1,0 +1,14 @@
+[core]
+	autocrlf = input
+	editor = gvim
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = D:\\Program Files\\KDiff3\\kdiff3.exe
+[mergetool]
+	prompt = false
+[difftool]
+	prompt = false
+[user]
+	name = mikewy0527
+	email = mike_wy0527@outlook.com
