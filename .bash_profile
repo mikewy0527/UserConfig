@@ -35,6 +35,13 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
+############## Add by Mike begin ##############
 # Set work dir
 mount -fo binary,noacl,posix=0,user "E:\workspace" ${HOME}/workspace
+
+# Set alias for efficiency
+if [ -f "${HOME}/.alias_conf" ] ; then
+  source "${HOME}/.alias_conf"
+fi
+############## Add by Mike end ###############
 
