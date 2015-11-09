@@ -48,3 +48,10 @@ filetype plugin indent on    " required
 
 syntax enable
 syntax on
+
+" Set encoding option
+ set enc=utf-8
+" Set fileencoding option
+set fenc=utf-8
+" Set fileencodings option
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
