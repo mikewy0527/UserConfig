@@ -1,6 +1,7 @@
 [core]
 	autocrlf = input
 	editor = gvim
+	quotepath = false
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
@@ -14,3 +15,6 @@
 	email = mike_wy0527@outlook.com
 [credential]
 	helper = store
+[i18n]
+	commitencoding = UTF-8
+	logoutputencoding = UTF-8
