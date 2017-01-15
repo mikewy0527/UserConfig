@@ -5,7 +5,7 @@
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
-	path = D:\\Program Files\\KDiff3\\kdiff3.exe
+	path = C:\\Program Files\\KDiff3\\kdiff3.exe
 [mergetool]
 	prompt = false
 [difftool]
