@@ -1,3 +1,12 @@
+# settings for proxy
+# export http_proxy="http://127.0.0.1:10809"
+# export https_proxy=$http_proxy
+# export HTTP_PROXY=$http_proxy
+# export HTTPS_PROXY=$https_proxy
+# export ftp_proxy=$http_proxy
+# export rsync_proxy=$http_proxy
+# export no_proxy="localhost,127.0.0.1,localaddress,local"
+
 # fix zh_CN garbled
 # export LANG=zh_CN.UTF-8
 # export LC_ALL=zh_CN.utf8
@@ -13,11 +22,11 @@
 #         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
 #         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 # fi
-# 
+#
 # source "$HOME/.zinit/bin/zinit.zsh"
 # autoload -Uz _zinit
 # (( ${+_comps} )) && _comps[zinit]=_zinit
-# 
+#
 # # Load a few important annexes, without Turbo
 # # (this is currently required for annexes)
 # zinit light-mode for \
@@ -25,7 +34,7 @@
 #     zinit-zsh/z-a-as-monitor \
 #     zinit-zsh/z-a-patch-dl \
 #     zinit-zsh/z-a-bin-gem-node
-# 
+#
 ### End of Zinit's installer chunk
 
 zinit snippet OMZ::lib/compfix.zsh
@@ -67,14 +76,11 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit snippet OMZ::themes/imajes.zsh-theme
 
-# settings for proxy
-# export http_proxy="http://127.0.0.1:10809"
-# export https_proxy=$http_proxy
-# export HTTP_PROXY=$http_proxy
-# export HTTPS_PROXY=$https_proxy
-# export ftp_proxy=$http_proxy
-# export rsync_proxy=$http_proxy
-# export no_proxy="localhost,127.0.0.1,localaddress,local"
+# make /<drive>/... autocompletion work.
+# e.g: /c/Windows/
+drives=$(mount | sed -rn 's#^[A-Z]: on /([a-z]).*#\1#p' | tr '\n' ' ')
+zstyle ':completion:*' fake-files /: "/:$drives"
+unset drives
 
 # custom alias
 source .alias_conf
