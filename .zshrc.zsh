@@ -74,7 +74,9 @@ zinit snippet OMZ::plugins/z
 zinit ice lucid wait='1'
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
-zinit snippet OMZ::themes/imajes.zsh-theme
+# zinit snippet OMZ::themes/imajes.zsh-theme
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
 
 # make /<drive>/... autocompletion work.
 # e.g: /c/Windows/
